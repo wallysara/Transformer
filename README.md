@@ -70,3 +70,24 @@ It includes:
 ### 1️⃣ Install dependencies
 ```bash
 pip install -r requirements.txt
+```
+2️⃣ Train the tokenizer
+
+Automatically handled in the script, or manually:
+```
+python src/tokenizer_build.py
+```
+3️⃣ Train the model
+```
+python main.py
+```
+4️⃣ Validate and view metrics
+
+TensorBoard:
+```
+tensorboard --logdir runs/tmodel
+```
+5️⃣ Inference
+```
+python inference.py --input="This is a book." --decode="greedy"
+```
